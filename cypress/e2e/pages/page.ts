@@ -1,36 +1,35 @@
 class Page {
-    navigate() {
-      cy.visit('https://demo.realworld.io/#/');
-    }
-  
-    getEmailInput() {
-      return cy.get('input[type="email"]');
-    }
-  
-    getPasswordInput() {
-      return cy.get('input[type="password"]');
-    }
-  
-    getSignInButton() {
-      return cy.get('button[type="submit"]');
-    }
-  
-    getErrorMessage() {
-      return cy.get('.error-messages');
-    }
-  
-    enterEmail(email: string) {
-      this.getEmailInput().type(email);
-    }
-  
-    enterPassword(password: string) {
-      this.getPasswordInput().type(password);
-    }
-  
-    clickSignIn() {
-      this.getSignInButton().click();
-    }
-
+  navigate() {
+    cy.visit("https://demo.realworld.io/#/");
   }
-  
-  export default Page;
+
+  getEmailInput() {
+    return cy.get('input[type="email"]');
+  }
+
+  getPasswordInput() {
+    return cy.get('input[type="password"]');
+  }
+
+  getSignInButton() {
+    return cy.get('button[type="submit"]');
+  }
+
+  getErrorMessage() {
+    return cy.get(".error-messages");
+  }
+
+  enterEmail(email: string) {
+    this.getEmailInput().type(email);
+  }
+
+  enterPassword(password: string) {
+    this.getPasswordInput().type(password);
+  }
+
+  clickSignIn() {
+    this.getSignInButton().click();
+  }
+}
+
+export default Page;

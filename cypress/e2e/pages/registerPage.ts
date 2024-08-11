@@ -1,24 +1,38 @@
-import Page from './page';
+import Page from "./page";
 
 class RegisterPage extends Page {
-    navigate() {
-        cy.visit('https://demo.realworld.io/#/register');
-      }
+  private readonly usernameInput = 'input[placeholder="Username"]';
+  private readonly emailInput = 'input[placeholder="Email"]';
+  private readonly passwordInput = 'input[placeholder="Password"]';
+  private readonly signUpButton = 'button[type="submit"]';
+  private readonly errorMessage = ".error-messages";
+
+  constructor() {
+    super();
+  }
+
+  navigate() {
+    cy.visit("https://demo.realworld.io/#/register");
+  }
 
   getUsernameInput() {
-    return cy.get('input[placeholder="Username"]');
+    return cy.get(this.usernameInput);
   }
 
   getEmailInput() {
-    return cy.get('input[placeholder="Email"]');
+    return cy.get(this.emailInput);
   }
 
   getPasswordInput() {
-    return cy.get('input[placeholder="Password"]');
+    return cy.get(this.passwordInput);
   }
 
   getSignUpButton() {
-    return cy.get('button[type="submit"]');
+    return cy.get(this.signUpButton);
+  }
+
+  getErrorMessage() {
+    return cy.get(this.errorMessage);
   }
 
   enterUsername(username: string) {
