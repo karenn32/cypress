@@ -2,7 +2,7 @@ import Page from "../pages/page";
 
 class LoginPage extends Page {
   navigate() {
-    cy.visit("https://demo.realworld.io/#/login");
+    cy.visit("#/login");
   }
 
   getEmailInput() {

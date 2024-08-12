@@ -12,7 +12,7 @@ class RegisterPage extends Page {
   }
 
   navigate() {
-    cy.visit("https://demo.realworld.io/#/register");
+    cy.visit("#/register");
   }
 
   getUsernameInput() {

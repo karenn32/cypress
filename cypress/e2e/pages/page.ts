@@ -1,6 +1,6 @@
 class Page {
   navigate() {
-    cy.visit("https://demo.realworld.io/#/");
+    cy.visit("");
   }
 
   getErrorMessage() {
